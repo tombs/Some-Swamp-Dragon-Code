@@ -1,0 +1,51 @@
+{% load static swampdragon_tags %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}center.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<!-- This is our list of notifications -->
+<div class="absoluteCenter">
+<ul id="notifications">
+    {% for notification in object_list %}
+    <li>{{ notification.message }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+<!-- SwampDragon -->
+{% swampdragon_settings %}
+<script type="text/javascript" src="{% static 'swampdragon/js/dist/swampdragon.min.js' %}"></script>
+
+<!-- notifications -->
+<script type="text/javascript" src="{{ STATIC_URL }}notifications.js"></script>
+
+<script>
+(function() {
+
+    var quotes = $(".absoluteCenter");
+    var quoteIndex = -1;
+    
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextQuote);
+    }
+    
+    showNextQuote();
+    
+})();
+
+</script>
+</body>
+</html>
+
