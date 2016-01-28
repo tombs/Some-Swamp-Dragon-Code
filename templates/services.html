@@ -3,19 +3,19 @@
 	<head>
 	<title>Services</title>
 	<meta charset="utf-8">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon" />
 	<meta name="description" content="Your description">
 	<meta name="keywords" content="Your keywords">
 	<meta name="author" content="Your name">
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/superfish.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/superfish.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='{{ STATIC_URL }}js/jquery.preloader.js'></"+"script>");}	</script>
 	<script>		
 		 jQuery(window).load(function() {	
 		 $x = $(window).width();		
@@ -50,21 +50,21 @@
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/logo.gif"> </a></h1>
+            <h1 class="brand brand_"><a href="{%  url 'home' %}"><img alt="" src="{{ STATIC_URL }}img/logo.png"> </a></h1>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li><a href="index.html">About</a></li>
-                <li class="sub-menu active"><a href="index-1.html">Services</a>
+                <li><a href="{%  url 'home' %}">Home</a></li>
+                <li class="sub-menu active"><a href="{%  url 'services' %}">Services</a>
                       <ul>
                     <li><a href="#">Dolore </a></li>
                     <li><a href="#">Consecte</a></li>
                     <li><a href="#">Conseq</a></li>
                   </ul>
                     </li>
-                <li><a href="index-2.html">Folio</a></li>
-                <li><a href="index-3.html">Blog</a></li>
-                <li><a href="index-4.html">Contact</a></li>
+                <li><a href="{%  url 'folio' %}">Folio</a></li>
+                <li><a href="{%  url 'blog' %}">Blog</a></li>
+                <li><a href="{%  url 'contact' %}">Contact</a></li>
               </ul>
                 </div>
           </div>
@@ -86,42 +86,42 @@
         <div class="clear"></div>
         <ul class="thumbnails thumbnails-1 list-services">
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img1.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img1.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
                 </div>
           </li>
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img2.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img2.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
                 </div>
           </li>
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img3.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img3.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
                 </div>
           </li>
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img4.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img4.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
                 </div>
           </li>
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img5.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img5.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
                 </div>
           </li>
               <li class="span4">
-            <div class="thumbnail thumbnail-1"> <img  src="img/page2-img6.jpg" alt="">
+            <div class="thumbnail thumbnail-1"> <img  src="{{ STATIC_URL }}img/page2-img6.jpg" alt="">
                   <section> <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
                 <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
               </section>
@@ -145,6 +145,6 @@
     <div class="privacy pull-left">Website Template designed by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a> </div>
   </div>
     </footer>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js"></script>
 </body>
 </html>
