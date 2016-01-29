@@ -11,4 +11,8 @@ urlpatterns = patterns('',
     url(r'^folio/$', Folio.as_view(), name='folio'),
     url(r'^contact/$', Contact.as_view(), name='contact'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
+
 )
+
