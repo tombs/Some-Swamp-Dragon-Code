@@ -86,9 +86,9 @@
 
         <div class="clearfix">
                {% if user.is_anonymous %}
-               <div style="float: left;  "> Welcome,  dear Guest! </div> <div style="float: right;">  <a href="{%  url 'login' %}">Login &nbsp; </a> </div>
+               <div style="float: left;  "> &nbsp Welcome,  dear Guest! </div> <div style="float: right;">  <a href="{%  url 'login' %}">Login &nbsp; </a> </div>
                {% else %}
-               <div style="float: left;  "> Welcome,  {{ user.username }}! </div> <div style="float: right;"> <a href="{%  url 'logout' %}?next={% url 'home' %}">Logout</a></div>
+               <div style="float: left;  "> &nbsp Welcome,  {{ user.username }}! </div> <div style="float: right;"> <a href="{%  url 'logout' %}?next={% url 'home' %}">Logout</a></div>
 
                {% endif %}
         </div>
@@ -108,7 +108,6 @@
           <li><a class="icon-3" href="#"></a></li>
           <li><a class="icon-4" href="#"></a></li>
         </ul>
-      <div class="privacy pull-left">Website Template designed by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a> </div>
       </div>
     </footer>
 <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js"></script>
