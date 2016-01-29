@@ -102,3 +102,7 @@ STATICFILES_DIRS = [
 TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, 'templates')
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+LOGIN_REDIRECT_URL = '/'
+
